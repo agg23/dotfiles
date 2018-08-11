@@ -1,0 +1,19 @@
+rofi.modi:			      combi
+rofi.combi-modi:          drun,run
+rofi.terminal:		      terminator
+rofi.separator-style:     solid
+rofi.hide-scrollbar:      true
+rofi.opacity:             99
+rofi.sidebar-mode:        true
+rofi.show-icons:          true
+
+! Layout
+rofi.width:              25
+rofi.column:             4
+rofi.location:           0
+rofi.lines:              8
+rofi.padding:            50
+rofi.sidebar-mode:       false
+rofi.fullscreen:         false
+
+rofi.theme:    Arc-Dark

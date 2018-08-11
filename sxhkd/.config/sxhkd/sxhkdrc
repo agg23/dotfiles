@@ -1,0 +1,32 @@
+# Web browser Back/Forward shortcuts
+{@F1,@F2}
+  xte 'key {XF86Back,XF86Forward}'
+
+# Web browser Refresh shortcut
+@F3
+  xte 'key XF86Reload'
+
+# Awesome WM maximize current window
+# Adjust as necessary for different window managers
+@F4
+  xte 'keydown Super_L' 'key m' 'keyup Super_L'
+
+# Awesome WM move one desktop right
+@F5
+  xte 'keydown Super_L' 'key Right' 'keyup Super_L'
+
+{F6,F7}
+  xbacklight -{dec,inc} 10
+
+F8
+  amixer -D pulse sset Master toggle -q
+
+{F9,F10}
+  amixer set Master 5%{-,+} -M unmute
+
+#XF86PowerOff
+  
+
+# Function defaults
+#{ctrl+F1,ctrl+F2,ctrl+F3,ctrl+F4,ctrl+F5,ctrl+F6,ctrl+F7,ctrl+F8,ctrl+F9,ctrl+F10}
+# xte 'key {F1,F2,F3,F4,F5,F6,F7,F8,F9,F10}'
