@@ -1,5 +1,27 @@
 #!/usr/bin/bash
 
+# Install stow
+sudo pacman -S stow
+
+# Grab dotfiles
+cd ~
+git clone https://github.com/agg23/dotfiles.git
+cd dotfiles
+
+# Setup basic dotfiles
+stow x11
+stow fonts
+stow wallpapers
+stow autostart
+
+stow i3
+stow compton
+stow gtk
+stow polybar
+stow rofi
+stow sxhkd
+stow terminator
+
 # Install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
