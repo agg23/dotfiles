@@ -1,6 +1,6 @@
 [global_config]
   borderless = True
-  title_font = Monospace 9
+  title_font = SF Mono Medium 11
   title_use_system_font = False
 [keybindings]
 [layouts]
@@ -17,6 +17,6 @@
     background_darkness = 0.7
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = Liberation Mono 11
+    font = SF Mono Medium 11
     show_titlebar = False
     use_system_font = False
