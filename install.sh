@@ -29,9 +29,12 @@ makepkg -si
 cd ..
 rm -r yay
 
+# Install X
+sudo pacman -S xorg xorg-xinit
+
 # Install basic environment
-sudo pacman -S i3-gaps compton rofi sxhkd flatpak
-yay -S polybar
+sudo pacman -S i3-gaps compton rofi sxhkd feh flatpak arc-gtk-theme
+yay -S polybar ttf-material-design-icons
 
 # Install applications
 sudo pacman -S terminator firefox geary nautilus
