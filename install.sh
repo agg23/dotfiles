@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Install stow
-sudo pacman -S stow
+sudo pacman -S base-devel stow git
 
 # Grab dotfiles
 cd ~
