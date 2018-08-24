@@ -10,6 +10,7 @@ cd dotfiles
 
 # Setup basic dotfiles
 stow x11
+stow git
 stow fonts
 stow wallpapers
 stow autostart
