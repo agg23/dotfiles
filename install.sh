@@ -37,7 +37,10 @@ sudo pacman -S xorg xorg-xinit
 sudo pacman -S i3-gaps compton rofi sxhkd feh flatpak arc-gtk-theme
 yay -S polybar ttf-material-design-icons
 
+# Install audio
+sudo pacman -S alsa-utils
+
 # Install applications
 sudo pacman -S terminator firefox geary nautilus
 yay -S visual-studio-code-bin enpass-bin
-flatpak install com.discordapp.Discord com.dropbox.Client
+flatpak install flathub com.discordapp.Discord com.dropbox.Client
