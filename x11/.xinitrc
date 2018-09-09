@@ -5,6 +5,6 @@ export SSH_AUTH_SOCK
 
 xrdb -merge ~/.Xresources
 
-~/.x11/setup.sh
+. $HOME/.x11/setup.sh
 
 exec i3
