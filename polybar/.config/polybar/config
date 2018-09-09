@@ -29,12 +29,12 @@ secondary = #98c379
 14 = #56b6c2
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+# margin-top = 8
+# margin-bottom = 8
 
 [bar/example]
 width = 100%
-height = 30
+height = 48
 offset-x = 0
 offset-y = 0
 
@@ -42,31 +42,32 @@ offset-y = 0
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-overline-size = 2
+overline-size = 4
 overline-color = #f00
-underline-size = 2
+underline-size = 4
 underline-color = #00f
 
-border-bottom-size = 2
+border-bottom-size = 4
 border-bottom-color = #333
 
 padding-left = 0
-padding-right = 2
-module-margin-left = 1
+padding-right = 4
+module-margin-left = 2
 module-margin-right = 2
 
-font-0 = .SF NS Text:pixelsize=12
+font-0 = .SF NS Text:size=20;3
 # font-1 = 
 # unifont:fontformat=truetype:size=7:heavy;-2
 # font-2 = FontAwesome:pixelsize=10
-font-1 = Material Icons:antialia=false:size=11
+font-1 = Material Icons:antialia=false:size=18;3
 
 modules-left = i3 xwindow
 modules-center = volume
-modules-right = cpu memory wlan temperature date battery powermenu
+modules-right = cpu memory wlan temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 4
+tray-maxsize = 48
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -89,14 +90,11 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 label-layout = %{F#55}%{F-} %layout%
-label-layout-underline = 
-${colors.secondary}
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = 
-${colors.secondary}
-label-indicator-underline = 
-${colors.secondary}
+label-layout-underline = ${colors.secondary}
+label-indicator-padding = 4
+label-indicator-margin = 2
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -106,33 +104,29 @@ mount-0 = /
 mount-1 = /home
 mount-2 = /invalid/mountpoint
 
-label-mounted = %mountpoint%: 
-%percentage_free%%
+label-mounted = %mountpoint%: %percentage_free%%
 
 label-unmounted = %mountpoint%: not mounted
-label-unmounted-foreground = 
-${colors.foreground-alt}
+label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = 
-${colors.background-alt}
+label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 4
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 4
 
 label-urgent = %index%!
 label-urgent-background = ${colors.primary}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 label-empty = %index%
-label-empty-foreground = 
-${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 4
 
 [module/i3]
 type = internal/i3
@@ -140,35 +134,26 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-label-mode-padding = 2
+label-mode-padding = 4
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 label-focused = %index%
-label-focused-background = 
-${module/bspwm.label-focused-background}
-label-focused-underline = 
-${module/bspwm.label-focused-underline}
-label-focused-padding = 
-${module/bspwm.label-focused-padding}
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
 
 label-unfocused = %index%
-label-unfocused-padding = 
-${module/bspwm.label-occupied-padding}
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 label-urgent = %index%!
-label-urgent-background = 
-${module/bspwm.label-urgent-background}
-label-urgent-padding = 
-${module/bspwm.label-urgent-padding}
+label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 label-visible = %index%
-label-visible-background = 
-${self.label-focused-background}
-label-visible-underline = 
-${self.label-focused-underline}
-label-visible-padding = 
-${self.label-focused-padding}
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
 
 [module/spotify]
 type = custom/script
@@ -181,10 +166,7 @@ click-middle = playerctl next
 [module/mpd]
 type = internal/mpd
 
-format-online = <label-song>  <icon-prev> 
-<icon-seekb> <icon-stop> <toggle> 
-<icon-seekf> <icon-next>  <icon-repeat> 
-<icon-random>
+format-online = <label-song>  <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>
 
 label-song-maxlen = 25
 label-song-ellipsis = true
@@ -218,8 +200,7 @@ bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = 
-${colors.foreground-alt}
+bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -274,8 +255,7 @@ time = %H:%M
 time-alt = %H:%M
 
 format-prefix = 
-format-prefix-foreground = 
-${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #c678dd
 
 label = %date% %time%
@@ -285,15 +265,13 @@ type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
-label-volume-foreground = 
-${root.foreground}
+label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
-format-muted-foreground = 
-${colors.foreground-alt}
+format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
-bar-volume-width = 10
+bar-volume-width = 20
 bar-volume-foreground-0 = #5c6370
 bar-volume-foreground-1 = #56b6c2
 bar-volume-foreground-2 = #56b6c2
@@ -309,8 +287,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = 
-${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -339,12 +316,12 @@ ramp-capacity-foreground = ${colors.foreground-alt}
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 50
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 
 format = <ramp> <label>
 format-underline = ${colors.11}
 format-warn = <ramp> <label-warn>
-format-warn-underline = 
-${self.format-underline}
+format-warn-underline = ${self.format-underline}
 
 label = %temperature-f%
 label-warn = %temperature-f%

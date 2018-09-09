@@ -172,6 +172,13 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+# Default workspaces
+
+assign [class="Firefox"] 1
+assign [class="Code"] 2
+assign [class="discord"] 4
+assign [class="Geary"] 4
+
 # Set up brightness keybinds
 
 # Set up keybinds
@@ -180,6 +187,12 @@ exec_always --no-startup-id ~/.config/i3/sxhkd.sh &
 
 # bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 # bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+bindsym 0xff13 exec "sleep 0.1; xset dpms force off"
+
+# Set up sleep
+
+exec_always --no-startup-id ~/.config/i3/sleep.sh &
 
 # Set cursor speed
 exec_always xinput --set-prop 10 "Pointer Sensitivity" 2
@@ -201,11 +214,20 @@ exec_always --no-startup-id ~/.config/i3/compton.sh &
 
 exec dex -ae i3
 
+# Autostart other apps
+
+# Enpass needs to be started before Firefox
+exec --no-startup-id enpass startWithTray
+exec --no-startup-id code --ignore-gpu-blacklist
+exec --no-startup-id com.discordapp.Discord
+exec --no-startup-id geary
+exec --no-startup-id firefox
+
 # Window settings
 
-new_window pixel 0
+new_window pixel
 
 # Gaps settings
 
-gaps inner 5
+gaps inner 10
 gaps outer 0

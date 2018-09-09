@@ -17,3 +17,5 @@ rofi.sidebar-mode:       false
 rofi.fullscreen:         false
 
 rofi.theme:    Arc-Dark
+rofi.dpi: 163
+rofi.font: sans-serif 15
