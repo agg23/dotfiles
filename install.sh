@@ -35,7 +35,7 @@ sudo pacman -S xorg xorg-xinit
 
 # Install basic environment
 sudo pacman -S i3-gaps compton rofi sxhkd feh flatpak arc-gtk-theme
-yay -S polybar ttf-material-design-icons
+yay -S polybar ttf-material-design-icons papirus-icon-theme-git
 
 # Install audio
 sudo pacman -S alsa-utils
