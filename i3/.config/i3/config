@@ -218,7 +218,7 @@ exec dex -ae i3
 
 # Enpass needs to be started before Firefox
 exec --no-startup-id enpass startWithTray
-exec --no-startup-id code --ignore-gpu-blacklist
+exec --no-startup-id code
 exec --no-startup-id com.discordapp.Discord
 exec --no-startup-id geary
 exec --no-startup-id firefox
