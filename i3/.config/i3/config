@@ -229,5 +229,5 @@ new_window pixel
 
 # Gaps settings
 
-gaps inner 10
+gaps inner 5
 gaps outer 0
