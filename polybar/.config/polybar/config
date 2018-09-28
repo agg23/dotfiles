@@ -63,7 +63,7 @@ font-1 = Material Icons:antialia=false:size=9;3
 
 modules-left = i3 xwindow
 modules-center = volume
-modules-right = cpu memory wlan temperature date powermenu
+modules-right = cpu memory wlan temperature date battery powermenu
 
 tray-position = right
 tray-padding = 4
